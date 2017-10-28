@@ -1,1 +1,5 @@
 @import "./fonts.css";
+@import "./base.css";
+@import "layout/first-screen.css";
+@import "layout/we-best.css";
+@import "layout/reviews.css";

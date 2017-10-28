@@ -1,0 +1,66 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: ubuntu;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  min-width: 960px;
+}
+
+.section {
+  min-height: 650px;
+}
+
+.container {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.section__title {
+  margin: 0;
+  font-family: gagalin;
+  font-size: 72px;
+  text-transform: uppercase;
+}
+
+.pagination {
+  position: fixed;
+  right: 55px;
+  top: 95px;
+  z-index: 100;
+}
+
+.pagination_list {
+  list-style: none;
+}
+
+.pagination__item {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pagination__item::after {
+  content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pagination__item:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.we_best {
+  background: url(../../img/bg/we_best_bg.jpg) center center no-repeat fixed;
+  background-size: cover;
+  height:100vh;
+}
+
+.we__title {
+  text-align: center;
+}
+
+.features_list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.features__item {
+  width: 300px;
+  text-align: center;
+  list-style: none;
+}
+
+.features__title {
+  font-family: lifehack;
+  font-weight: 500;
+  color: #2f3234;
+  font-size: 24px;
+}
+
+.features__desc {
+  font-weight: 300;
+  color: #2f3234;
+  opacity: 0.8;
+  font-size: 14px;
+}
