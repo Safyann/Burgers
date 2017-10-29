@@ -150,7 +150,7 @@ ul {
     border: 1px solid #fff;
     cursor: pointer; }
 
-.active {
+.pagination__item--active {
   border: 1px solid #fff; }
 
 .first_screen {
