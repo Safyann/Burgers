@@ -1,0 +1,43 @@
+.we_best {
+  background: url(../img/bg/we_best_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.we__title {
+  color: #2f3234;
+  padding: 0;
+  margin-bottom: rem(60px);
+}
+
+.features_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+
+.features__item {
+  width: 300px;
+  text-align: center;
+  list-style: none;
+}
+
+.features__title {
+  font-family: lifehack;
+  font-weight: 500;
+  color: $dark;
+  font-size: 24px;
+}
+
+.features__desc {
+  font-weight: 300;
+  color: $dark;
+  opacity: 0.8;
+  font-size: 14px;
+}
