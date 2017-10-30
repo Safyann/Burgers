@@ -1,10 +1,10 @@
 .first_screen {
-  background-image: url("../img/bg/welcome_page_texture.png"), url("../img/bg/welcome_page_bg.jpg") ;
-  background-position: top right, center center;
-  background-attachment: fixed, fixed;
-  background-repeat: repeat, no-repeat;
-  background-size: auto, cover;
-  height:100vh;
+  background-image: url("../img/bg/welcome_page_bg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100%;
 }
 
 .header {
@@ -86,7 +86,7 @@
   color: $yellow;
 }
 
-.promo__img, .promo__desc {
+.promo__image, .promo__desc {
   flex-basis: 50%;
   display: flex;
 }
