@@ -1,7 +1,6 @@
 .first_screen {
   background-image: url("../img/bg/welcome_page_bg.jpg");
   background-position: center center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   height:100%;
@@ -30,7 +29,7 @@
   margin-right: rem(15px);
 }
 
-.nav_list {
+.nav-list {
   padding: 0;
   margin: 0;
 }
@@ -73,27 +72,15 @@
   align-items: center;
 }
 
-.promo {
-  width: 100%;
+.welcome {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
-  padding-bottom: 15%;
 }
 
-.promo__title {
-  color: $yellow;
-}
-
-.promo__image, .promo__desc {
+.welcome__col {
   flex-basis: 50%;
-  display: flex;
-}
-
-.promo__desc {
-  flex-direction: column;
-  justify-content: center;
 }
 
 .section__title {
@@ -106,7 +93,7 @@
   padding-top: 60px;
 }
 
-.promo__desc-text {
+.welcome__desc {
   color: #ffffff;
   font-family: 'Lifehack';
   font-size: 65px;

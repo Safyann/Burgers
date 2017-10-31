@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +14,7 @@
   margin-bottom: rem(60px);
 }
 
-.features_list {
+.features-list {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -23,7 +22,7 @@
 }
 
 .features__item {
-  width: 300px;
+  flex: 3;
   text-align: center;
   list-style: none;
 }
