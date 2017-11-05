@@ -28,19 +28,19 @@
 
 .address {
   width: 300;
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
 }
 
 .phone__icon {
-  width: 12px;
-  height: 12px;
+  width: rem(12px);
+  height: rem(12px);
   fill: $orange;
 }
 
 .phone__number {
   color: $orange;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 900;
   text-decoration: none;
 }
@@ -51,11 +51,11 @@
 
 .social__icon {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: rem(20px);
   fill: #fff;
   opacity: 0.3;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   transition: .5s;
   &:hover {
     opacity: 1;

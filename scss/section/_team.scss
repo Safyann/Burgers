@@ -13,47 +13,47 @@
   height: 100%;
   background-color: $dark;
   opacity: 0.93;
-  padding: 90px 80px;
+  padding: rem(90px) rem(80px);
   width: 50%;
 }
 
 .team__title {
-  margin-bottom: 80px;
+  margin-bottom: rem(80px);
 }
 
 .team-accordeon__content {
   display: flex;
   height: 0;
   overflow: hidden;
-  margin-bottom: 20px;
-  padding-left: 20px;
+  margin-bottom: rem(20px);
+  padding-left: rem(20px);
 }
 
 .team-accordeon__img {
-  flex: 0 0 100px;
+  flex: 0 0 rem(100px);
   display: flex;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: rem(20px);
 }
 
 .team-accordeon__name {
   font-family: 'Gagalin';
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
   text-decoration: none;
   position: relative;
-  padding-left: 20px;
+  padding-left: rem(20px);
   &::before {
     position: absolute;
     content: "";
-    border: 7px solid transparent;
-    border-top: 10px solid $yellow;
+    border: rem(7px) solid transparent;
+    border-top: rem(10px) solid $yellow;
     left: 0;
     top: 50%;
     transform: translateY(-25%);
@@ -62,27 +62,27 @@
 
 .team-accordeon__text {
   color: #fff;
-  font-size: 14px;
-  width: 240px;
+  font-size: rem(14px);
+  width: rem(240px);
 }
 
 .team-accordeon__title {
   font-weight: 900;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 
 .team-accordeon__item--active {
 
   .team-accordeon__content {
     height: auto;
-    margin-top: 20px;
+    margin-top: rem(20px);
   }
 
   .team-accordeon__name {
     color: $yellow;
     &::before {
       border-top: transparent;
-      border-bottom: 10px solid $yellow;
+      border-bottom: rem(10px) solid $yellow;
       transform: translateY(-50%)
     }
   }

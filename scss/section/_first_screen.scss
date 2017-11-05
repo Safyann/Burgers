@@ -3,7 +3,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height:100%;
+  position: relative;
 }
 
 .header {
@@ -11,13 +11,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .logo {
   margin-right: auto;
-  width: 93px;
-  height: 68px;
+  width: rem(93px);
+  height: rem(68px);
 }
 
 .logo__img {
@@ -41,8 +41,8 @@
     display: inline-block;
     vertical-align: middle;
     content: ' ';
-    @include circle(5px, #fff);
-    margin: 0 12px;
+    @include circle(rem(5px), #fff);
+    margin: 0 rem(12px);
   }
   &:last-child:after {
     display: none;
@@ -51,7 +51,7 @@
 
 .nav__link {
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -83,19 +83,14 @@
   flex-basis: 50%;
 }
 
-.section__title {
-  color: $yellow;
-  font-family: 'Gagalin';
-  font-size: 72px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
+.welcome__img {
+  max-width: 100%;
 }
 
 .welcome__desc {
   color: #ffffff;
   font-family: 'Lifehack';
-  font-size: 65px;
+  font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
 }
@@ -105,12 +100,12 @@
   justify-content: center;
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: rem(50px);
   transform: translateX(50%);
 }
 
 .scroll__img {
-  width: 30px;
-  height: 15px;
+  width: rem(30px);
+  height: rem(15px);
   fill: #fff;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Mr. Burger</title>
+  <script src="./js/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -20,28 +24,26 @@
             <nav class="nav">
               <ul class="nav-list">
                 <li class="nav__item">
-                  <a href="#" class="nav__link">О нас</a>
+                  <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Бургеры</a>
+                  <a href="#" class="nav__link" data-scroll-to="2">Бургеры</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Команда</a>
+                  <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Меню</a>
+                  <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Отзывы</a>
+                  <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#" class="nav__link">Контакты</a>
+                  <a href="#" class="nav__link" data-scroll-to="7">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <div class="order">
-              <a href="#" class="order__link">Заказать</a>
-            </div>
+            <a href="#" class="order" data-scroll-to="6">Заказать</a>
           </header>
 
           <div class="welcome">
@@ -54,22 +56,11 @@
             </div>
           </div>
 
-          <a href="#" class="scroll">
+          <a href="#" class="scroll" data-scroll-to="1">
             <svg class="scroll__img">
               <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
             </svg>
           </a>
-
-          <ul class="pagination-list">
-            <li class="pagination__item pagination__item--active"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-            <li class="pagination__item"></li>
-          </ul>
         </div>
       </section>
 
@@ -78,19 +69,37 @@
           <h2 class="section__title we__title">Мы лучшие</h2>
           <ul class="features-list">
             <li class="features__item">
-              <img src="img/icons/meat.svg" alt="" class="features__img">
-              <h3 class="features__title">100% свежее мясо</h3>
-              <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+              <div class="best__icon">
+                <svg class="features__img features__img-meat">
+                  <use xlink:href="img/icons/sprite.svg#meat"></use>
+                </svg>
+              </div>
+              <div class="best__content">
+                <h3 class="features__title">100% свежее мясо</h3>
+                <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+              </div>
             </li>
             <li class="features__item">
-              <img src="img/icons/hand.svg" alt="" class="features__img">
-              <h3 class="features__title">Ручная  сборка</h3>
-              <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+              <div class="best__icon">
+                <svg class="features__img features__img-hand">
+                  <use xlink:href="img/icons/sprite.svg#hand"></use>
+                </svg>
+              </div>
+              <div class="best__content">
+                <h3 class="features__title">Ручная  сборка</h3>
+                <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+              </div>
             </li>
             <li class="features__item">
-              <img src="img/icons/natural.svg" alt="" class="features__img">
-              <h3 class="features__title">Натуральные ингредиенты</h3>
-              <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+              <div class="best__icon">
+                <svg class="features__img features__img-natural">
+                  <use xlink:href="img/icons/sprite.svg#natural"></use>
+                </svg>
+              </div>
+              <div class="best__content">
+                <h3 class="features__title">Натуральные ингредиенты</h3>
+                <p class="features__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -185,56 +194,56 @@
 
       <section class="section reviews">
           <ul class="reviews-list">
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_1.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_1.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_2.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_2.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_3.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_3.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_4.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_4.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_5.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_5.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_6.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_6.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_7.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_7.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                 <a href="#" class="reviews__btn">Подробнее</a>
               </div>
             </li>
-            <li class="reviews__item" style="background-image: url('./img/content/photo/photo_8.jpg')">
+            <li class="reviews__item" style="background-image: url('img/content/photo/photo_8.jpg')">
               <div class="reviews__overlay">
                 <div class="reviews__name">Константин Спилберг</div>
                 <p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
@@ -245,46 +254,75 @@
       </section>
 
       <section class="section form">
-        <div class="container">
+        <div class="container form_container">
           <h2 class="section__title">Закажите доставку</h2>
-          <form class="" action="index.html" method="post">
+          <form class="form__order">
             <div class="form__col">
               <div class="form__row">
-                <div class="form__column">
+                <div class="form__block">
                   <label for="name" class="form__label">Имя</label>
-                  <input type="text" name="name" id="name" class="form__input">
+                  <input type="text" name="name" id="name" class="form__input form__input-name">
                 </div>
-                <div class="form__column">
+                <div class="form__block">
                   <label for="phone" class="form__label">Телефон</label>
-                  <input type="tel" name="phone" id="phone" class="form__input">
+                  <input type="tel" name="phone" id="phone" class="form__input form__input-tel">
                 </div>
               </div>
               <div class="form__row">
-                <label for="street" class="form__label">Улица</label>
-                <input type="text" name="street" id="street" class="form__input">
+                <div class="form__block">
+                  <label for="street" class="form__label">Улица</label>
+                  <input type="text" name="street" id="street" class="form__input form__input-street">
+                </div>
               </div>
               <div class="form__row">
-                <div class="form__column">
+                <div class="form__block">
                   <label for="home" class="form__label">Дом</label>
-                  <input type="number" name="home" id="home" class="form__input">
+                  <input type="text" name="home" id="home" class="form__input form__input-location">
                 </div>
-                <div class="form__column">
+                <div class="form__block">
                   <label for="block" class="form__label">Корпус</label>
-                  <input type="text" name="block" id="block" class="form__input">
+                  <input type="text" name="block" id="block" class="form__input form__input-location">
                 </div>
-                <div class="form__column">
+                <div class="form__block">
                   <label for="apartment" class="form__label">Квартира</label>
-                  <input type="number" name="apartment" id="apartment" class="form__input">
+                  <input type="text" name="apartment" id="apartment" class="form__input form__input-location">
                 </div>
-                <div class="form__column">
+                <div class="form__block">
                   <label for="floor" class="form__label">Этаж</label>
-                  <input type="number" name="floor" id="floor" class="form__input">
+                  <input type="text" name="floor" id="floor" class="form__input form__input-location">
                 </div>
               </div>
             </div>
             <div class="form__col">
-              <label for="comment" class="form__label">Комментарий</label>
-              <textarea name="comment" id="comment" class="form__input"></textarea>
+              <div class="form__row">
+                <div class="form__block">
+                  <label for="comment" class="form__label">Комментарий</label>
+                  <textarea name="comment" id="comment" class="form__textarea"></textarea>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="form__label form__label-radio">
+                  <input type="radio" name="payment" value="delivery" class="form__radio">
+                  <span class="form__radio-fake"></span>
+                  <span class="form__label">Потребуется здача </span>
+                </label>
+                <label class="form__label form__label-radio">
+                  <input type="radio" name="payment" value="paymentbycard" class="form__radio">
+                  <span class="form__radio-fake"></span>
+                  <span class="form__label">Оплата по карте</span>
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__label form__label-chekbox">
+                  <input type="checkbox" class="form__radio">
+                  <span class="form__radio-fake"></span>
+                  <span class="form__label">Не перезванивать</span>
+                </label>
+              </div>
+              <div class="form__row">
+                <button type="submit" name="button" class="order">Заказать</button>
+                <input type="reset" class="form__clear" value="Очистить">
+              </div>
             </div>
           </form>
         </div>
@@ -322,6 +360,17 @@
         </footer>
       </section>
     </div>
+
+    <ul class="pagination-list">
+      <li class="pagination__item pagination__item--active"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+      <li class="pagination__item"></li>
+    </ul>
   </div>
 </body>
 </html>

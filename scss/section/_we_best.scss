@@ -11,32 +11,47 @@
 .we__title {
   color: #2f3234;
   padding: 0;
-  margin-bottom: rem(60px);
+  margin-bottom: rem(80px);
 }
 
 .features-list {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
 }
 
 .features__item {
   flex: 3;
   text-align: center;
-  list-style: none;
+}
+
+.features__img {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+  &-meat {
+    fill: #e25028;
+  }
+  &-hand {
+    fill: #f8b43a;
+  }
+  &-natural {
+    fill: #8ac03e;
+  }
 }
 
 .features__title {
   font-family: lifehack;
   font-weight: 500;
   color: $dark;
-  font-size: 24px;
+  font-size: rem(24px);
 }
 
 .features__desc {
   font-weight: 300;
   color: $dark;
   opacity: 0.8;
-  font-size: 14px;
+  font-size: rem(14px);
 }

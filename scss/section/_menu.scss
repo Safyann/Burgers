@@ -26,7 +26,7 @@
 }
 
 .menu-acco__link {
-  width: 80px;
+  width: rem(80px);
   height: 100%;
   background-size: cover;
   background-position: 50%;
@@ -40,7 +40,7 @@
   top: 50%;
   color: #fff;
   font-family: 'Gagalin';
-  font-size: 40px;
+  font-size: rem(40px);
   white-space: nowrap;
   z-index: 10;
   transform: translateY(-50%) translateX(-35%) rotate(-90deg);
@@ -51,18 +51,18 @@
   overflow: hidden;
   background-color: $dark;
   opacity: 0.93;
-  line-height: 24px;
+  line-height: rem(24px);
 }
 
 .menu-acco__item--active {
   .menu-acco__desc {
-    width: 540px;
-    padding: 60px 35px;
+    width: rem(540px);
+    padding: rem(60px) rem(35px);
   }
 }
 
 .menu-acco__text {
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
 }
