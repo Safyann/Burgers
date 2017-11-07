@@ -25,6 +25,13 @@
   height: 100%;
 }
 
+.header__menu {
+
+  @include tablets() {
+    display: none;
+  }
+}
+
 .nav {
   margin-right: rem(15px);
 }
@@ -40,7 +47,7 @@
   &:after {
     display: inline-block;
     vertical-align: middle;
-    content: ' ';
+    content: '';
     @include circle(rem(5px), #fff);
     margin: 0 rem(12px);
   }
@@ -64,6 +71,11 @@
   }
 }
 
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
 .first_container {
   height: 100%;
   display: flex;
@@ -77,14 +89,37 @@
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
+
+  @include tablets() {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .welcome__col {
   flex-basis: 50%;
+
+  @include tablets() {
+    flex-basis: 100%;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .welcome__img {
-  max-width: 100%;
+  @include tablets {
+    width:351px ;
+    height: 329px;
+  }
+   @include phones {
+    width: 264px;
+    height: 298px;
+  }
+}
+
+.welcome__title {
+  margin: 0;
 }
 
 .welcome__desc {
@@ -92,16 +127,16 @@
   font-family: 'Lifehack';
   font-size: rem(65px);
   font-weight: 500;
-  line-height: 1;
+  line-height: rem(85px);
+
+  @include tablets {
+
+  }
 }
 
 .scroll {
-  display: flex;
-  justify-content: center;
   position: absolute;
-  left: 50%;
-  bottom: rem(50px);
-  transform: translateX(50%);
+  bottom: 5%;
 }
 
 .scroll__img {

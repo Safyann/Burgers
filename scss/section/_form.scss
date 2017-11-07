@@ -5,32 +5,61 @@
   align-items: center;
   .section__title {
     text-align: center;
+
+    @include tablets {
+    margin-bottom: rem(50px);
+    font-size: rem(60px);
+  }
+    @include phones {
+      font-size: rem(50px);
+      margin-bottom: rem(25px);
+    }
   }
 }
 
 .form__order {
   display: flex;
-  margin-right: rem(-20px);
+  padding-bottom: 15%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .form__col {
   width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .form__row {
   margin-bottom: rem(16px);
   display: flex;
+  flex-direction: row;
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .form__block {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   flex: 1;
   margin-right: rem(20px);
+
+  @include phones {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .form__label {
-  margin-bottom: rem(17px);
   color: #fff;
   font-size: rem(14px);
   font-weight: 300;
@@ -43,6 +72,7 @@
   border-radius: rem(5px);
   width: 100%;
   outline: none;
+  margin-top: rem(7px);
 
   &:focus {
     border-color: $yellow;
@@ -82,6 +112,7 @@
   margin-right: rem(20px);
   cursor: pointer;
   display: flex;
+  margin-bottom: rem(20px);
 }
 
 .form__radio {

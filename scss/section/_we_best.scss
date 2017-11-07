@@ -6,23 +6,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    background-position: center center;
+  }
 }
 
 .we__title {
   color: #2f3234;
   padding: 0;
-  margin-bottom: rem(80px);
+
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 .features-list {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .features__item {
   flex: 3;
   text-align: center;
+
+  @include phones {
+    flex-direction: row;
+  }
+}
+
+.best__icon {
+  margin-bottom: rem(20px);
 }
 
 .features__img {
@@ -47,6 +66,7 @@
   font-weight: 500;
   color: $dark;
   font-size: rem(24px);
+  margin: 0;
 }
 
 .features__desc {
