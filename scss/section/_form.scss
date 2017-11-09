@@ -19,7 +19,6 @@
 
 .form__order {
   display: flex;
-  margin-right: rem(-20px);
 
   @include tablets {
     flex-direction: column;
@@ -79,24 +78,10 @@
   }
 }
 
-.form__input-name,
-.form__input-tel {
-  width: rem(220px);
-}
-
-.form__input-street {
-  width: rem(460px);
-}
-
-.form__input-location {
-  width: rem(100px);
-}
-
 .form__textarea {
   background-color: #fff;
   border-radius: rem(5px);
   outline: none;
-  width: rem(460px);
   height: rem(110px);
   resize: none;
   border: rem(2px) solid transparent;
