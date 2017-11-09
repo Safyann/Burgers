@@ -1,0 +1,73 @@
+.menu {
+  background-image: url(../img/bg/menu_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+.menu__title {
+  color: #fff;
+  padding: rem(110px) rem(95px);
+}
+
+
+.menu-acco {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.menu-acco__item, .menu-acco__link {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.menu-acco__link {
+  width: rem(80px);
+  height: 100%;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.menu-acco__title {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: rem(40px);
+  white-space: nowrap;
+  z-index: 10;
+  transform: translateY(-50%) translateX(-35%) rotate(-90deg);
+}
+
+.menu-acco__desc {
+  width: 0;
+  overflow: hidden;
+  background-color: $dark;
+  opacity: 0.93;
+  line-height: rem(24px);
+}
+
+.menu-acco__item--active {
+  .menu-acco__desc {
+    width: rem(540px);
+    padding: rem(60px) rem(35px);
+    @include tablets {
+      width: 100%
+    }
+  }
+}
+
+.menu-acco__text {
+  color: #fff;
+  font-size: rem(14px);
+  font-weight: 300;
+}

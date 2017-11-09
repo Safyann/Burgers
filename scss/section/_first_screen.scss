@@ -1,0 +1,146 @@
+.first_screen {
+  background-image: url("../img/bg/welcome_page_bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(10px);
+}
+
+.logo {
+  margin-right: auto;
+  width: rem(93px);
+  height: rem(68px);
+}
+
+.logo__img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__menu {
+
+  @include tablets() {
+    display: none;
+  }
+}
+
+.nav {
+  margin-right: rem(15px);
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  white-space: nowrap;
+  &:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    @include circle(rem(5px), #fff);
+    margin: 0 rem(12px);
+  }
+  &:last-child:after {
+    display: none;
+  }
+}
+
+.nav__link {
+  color: #ffffff;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .5s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
+.first_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+
+  @include tablets() {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.welcome__col {
+  flex-basis: 50%;
+
+  @include tablets() {
+    flex-basis: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.welcome__img {
+  @include tablets {
+    width:351px ;
+    height: 329px;
+  }
+   @include phones {
+    width: 264px;
+    height: 298px;
+  }
+}
+
+.welcome__title {
+  margin: 0;
+}
+
+.welcome__desc {
+  color: #ffffff;
+  font-family: 'Lifehack';
+  font-size: rem(65px);
+  font-weight: 500;
+  line-height: rem(85px);
+
+  @include tablets {
+
+  }
+}
+
+.scroll {
+  position: absolute;
+  bottom: 5%;
+}
+
+.scroll__img {
+  width: rem(30px);
+  height: rem(15px);
+  fill: #fff;
+}
