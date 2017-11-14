@@ -437,15 +437,18 @@ ul {
   max-height: 100%; }
   @media screen and (max-width: 768px) {
     .welcome__img {
-      width: 351px;
-      height: 329px; } }
+      width: 85%;
+      height: 85%; } }
   @media screen and (max-width: 480px) {
     .welcome__img {
-      width: 264px;
-      height: 298px; } }
+      width: 65%;
+      height: 65%; } }
 
 .welcome__title {
   margin: 0; }
+  @media screen and (max-width: 480px) {
+    .welcome__title {
+      font-size: 3.75rem; } }
 
 .welcome__desc {
   color: #ffffff;
@@ -453,6 +456,9 @@ ul {
   font-size: 4.0625rem;
   font-weight: 500;
   line-height: 5.3125rem; }
+  @media screen and (max-width: 480px) {
+    .welcome__desc {
+      font-size: 3.125rem; } }
 
 .scroll {
   position: absolute;
@@ -605,7 +611,8 @@ ul {
   height: 100%; }
 
 .burgers-slider {
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .burgers-slider__item {
   display: -webkit-box;
@@ -664,8 +671,8 @@ ul {
       transition: opacity 1s; }
   @media screen and (max-width: 768px) {
     .ingredients {
-      left: 1.25rem;
-      top: 1.25rem; } }
+      left: 5%;
+      top: 5%; } }
 
 .ingredients__icon {
   width: 2.8125rem;
@@ -728,8 +735,8 @@ ul {
   align-items: center; }
   @media screen and (max-width: 768px) {
     .burger-weight {
-      top: 1.25rem;
-      right: 1.25rem;
+      top: 5%;
+      right: 5%;
       left: auto;
       bottom: auto; } }
 
@@ -799,6 +806,10 @@ ul {
       text-align: center;
       padding: 0 5.3125rem;
       margin-bottom: 1.25rem; } }
+  @media screen and (max-width: 480px) {
+    .burgers-slider__text {
+      padding: 0;
+      margin: 0; } }
 
 .burgers-slider__options {
   display: -webkit-box;
@@ -1071,6 +1082,21 @@ ul {
       font-size: 0.875rem;
       padding: 0 12%;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .reviews__overlay {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .reviews__name {
   font-family: gagalin;
@@ -1168,7 +1194,8 @@ ul {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center;
+      margin-bottom: 0.625rem; } }
 
 .form__block {
   display: -webkit-box;
@@ -1225,7 +1252,7 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 0; }
 
 .form__radio {
   position: absolute;

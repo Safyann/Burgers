@@ -142,17 +142,20 @@
   max-width: 100%;
   max-height: 100%;
   @include tablets {
-    width: 351px ;
-    height: 329px;
+    width: 85%;
+    height: 85%;
   }
    @include phones {
-    width: 264px;
-    height: 298px;
+     width: 65%;
+     height: 65%;
   }
 }
 
 .welcome__title {
   margin: 0;
+  @include phones {
+    font-size: rem(60px);
+  }
 }
 
 .welcome__desc {
@@ -161,6 +164,9 @@
   font-size: rem(65px);
   font-weight: 500;
   line-height: rem(85px);
+  @include phones {
+    font-size: rem(50px);
+  }
 }
 
 .scroll {
