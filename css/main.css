@@ -437,10 +437,6 @@ ul {
   max-height: 100%; }
   @media screen and (max-width: 768px) {
     .welcome__img {
-      width: 85%;
-      height: 85%; } }
-  @media screen and (max-width: 480px) {
-    .welcome__img {
       width: 65%;
       height: 65%; } }
 
