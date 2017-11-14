@@ -15,17 +15,21 @@
   z-index: 2;
   &_prew {
     transform: rotate(90deg);
-    left: rem(30px);
+    left: 5%;
   }
   &_next {
     transform: rotate(-90deg);
-    right: rem(30px);
+    right: 5%;
   }
 }
 
 .burger-slider__arrow {
   width: 100%;
   height: 100%;
+}
+
+.burgers-slider {
+  position: relative;
 }
 
 .burgers-slider__item {
@@ -60,6 +64,7 @@
   }
   @include tablets {
     left: rem(20px);
+    top: rem(20px);
   }
 }
 
@@ -107,7 +112,7 @@
   flex-direction: column;
   align-items: center;
   @include tablets {
-    top: 0;
+    top: rem(20px);
     right: rem(20px);
     left: auto;
     bottom: auto;
@@ -179,6 +184,7 @@
 .burgers-slider__options {
   display: flex;
   align-items: baseline;
+  margin-bottom: rem(20px);
 }
 
 .burgers-slider__price {
