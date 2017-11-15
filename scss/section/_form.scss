@@ -41,6 +41,7 @@
 
   @include phones {
     justify-content: center;
+    margin-bottom: rem(10px);
   }
 }
 
@@ -76,6 +77,7 @@
   &:focus {
     border-color: $yellow;
   }
+
 }
 
 .form__textarea {
@@ -97,7 +99,7 @@
   margin-right: rem(20px);
   cursor: pointer;
   display: flex;
-  margin-bottom: rem(20px);
+  margin-bottom: 0;
 }
 
 .form__radio {
