@@ -49,6 +49,9 @@
 
 .nav {
   margin-right: rem(15px);
+  @include tablets {
+    margin-right: 0;
+  }
 }
 
 .nav-list {

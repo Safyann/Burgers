@@ -1,5 +1,5 @@
-let hamburger = document.querySelector(".hamburger-menu-link");
-let hamburgerMenu = document.getElementById('hamburger-menu')
+var hamburger = document.querySelector(".hamburger-menu-link");
+var hamburgerMenu = document.getElementById('hamburger-menu')
 
 hamburger.addEventListener("click", function() {
 	if (hamburger.classList.contains("hamburger_active")) {
