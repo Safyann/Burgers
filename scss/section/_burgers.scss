@@ -13,13 +13,21 @@
   height: rem(15px);
   fill: #fff;
   z-index: 2;
+
   &_prew {
     transform: rotate(90deg);
-    left: 5%;
+    left: -5%;
+    @include tablets {
+      left: -1%;
+    }
   }
+
   &_next {
     transform: rotate(-90deg);
-    right: 5%;
+    right: -5%;
+    @include tablets {
+      right: -1%;
+    }
   }
 }
 
@@ -166,6 +174,9 @@
   @include tablets {
     text-align: center;
     margin-bottom: rem(30px);
+  }
+  @include phones {
+    font-size: rem(40px);
   }
 }
 

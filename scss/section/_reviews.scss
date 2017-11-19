@@ -22,7 +22,8 @@
   &:hover {
     .reviews__overlay {
       opacity: 1;
-      transition: .5s;
+      transition: 1s;
+      transform: scale(1);
     }
   }
 }
@@ -35,6 +36,7 @@
   height: 100%;
   width: 100%;
   background: rgba(20, 20, 20, 0.6);
+  transform: scale(.5);
   opacity: 0;
 
   @include tablets {

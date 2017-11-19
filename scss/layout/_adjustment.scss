@@ -12,7 +12,6 @@
 
 .container {
   width: 100%;
-  height: 100%;
   max-width: rem(960px);
   padding: rem(0px) rem(10px);
   margin: 0 auto;
@@ -59,7 +58,7 @@
   }
 }
 
-.pagination-list {
+.onepage-pagination {
   position: fixed;
   right: rem(55px);
   top: rem(95px);
@@ -70,7 +69,7 @@
   }
 }
 
-.pagination__item {
+.onepage-pagination li {
   width: rem(16px);
   height: rem(16px);
   border-radius: 50%;
@@ -80,8 +79,8 @@
   content: "";
   @include circle(rem(6px), #fff);
   position: absolute;
-  margin-left: 50%;
-  margin-top: 50%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   }
   &:hover {
@@ -90,7 +89,17 @@
   }
 }
 
-.pagination__item--active {
+.onepage-pagination li a {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  &::before {
+    content: none;
+  }
+}
+
+.onepage-pagination li a.active {
+  border-radius: 50%;
   border: rem(1px) solid #fff;
 }
 
@@ -129,4 +138,24 @@
   .hamburger-menu-link__line:nth-child(3n+0) {
     transform: rotate(-45deg) translateY(-13px);
   }
+}
+
+.popup {
+  display: none;
+}
+
+.full-review {
+  padding: rem(25px) rem(20px);
+  width: 50%;
+}
+
+.full-review__title {
+  font-family: gagalin;
+  font-size: rem(14px);
+  margin-bottom: rem(30px);
+}
+
+.full-review__content {
+  font-weight: 300;
+  font-size: rem(14px);
 }
