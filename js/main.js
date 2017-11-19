@@ -64,11 +64,77 @@ $(document).ready(() => {
 	})
 });
 
-$(document).ready(() => {
-  $('.team-accordeon').asAccordion({
-    namespace: 'team-accordeon'
-  });
-});
+$(function () {
+  $('.team-accordeon__item').on('click', e => {
+    e.preventDefault()
+
+    const $this = $(e.currentTarget);
+    const container = $this.closest('.team-accordeon');
+    const item = $this.closest('.team-accordeon__item');
+    const items = $('.team-accordeon__item', container);
+    const content = $('.team-accordeon__content', item);
+    const otherContent = $('.team-accordeon__content', container);
+    const textBlock = $('.team-accordeon__text', item);
+    const reqHeight = textBlock.outerHeight();
+
+    if (!item.hasClass('active')) {
+      items.removeClass('active')
+      item.addClass('active')
+
+      otherContent.css({
+        'height': 0
+      })
+
+      content.css({
+        'height': reqHeight
+      })
+
+    } else {
+
+      item.removeClass('active');
+      content.css({
+        'height' : 0
+      })
+    }
+
+  })
+})
+
+$(function () {
+  $('.menu-acco__item').on('click', e => {
+    e.preventDefault()
+
+    const $this = $(e.currentTarget);
+    const container = $this.closest('.menu-acco');
+    const item = $this.closest('.menu-acco__item');
+    const items = $('.menu-acco__item', container);
+    const content = $('.menu-acco__desc', item);
+    const otherContent = $('.menu-acco__desc', container);
+    const textBlock = $('.menu-acco__text', item);
+    const reqWidth = textBlock.outerWidth();
+
+    if (!item.hasClass('active')) {
+      items.removeClass('active')
+      item.addClass('active')
+
+      otherContent.css({
+        'width': 0
+      })
+
+      content.css({
+        'width': reqWidth
+      })
+
+    } else {
+
+      item.removeClass('active');
+      content.css({
+        'width' : 0
+      })
+    }
+
+  })
+})
 
 ymaps.ready(init);
   var myMap

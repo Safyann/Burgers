@@ -85,7 +85,6 @@
   color: #fff;
   font-size: rem(14px);
   width: rem(240px);
-  height: 100px;
 }
 
 .team-accordeon__title {
@@ -93,7 +92,7 @@
   margin-bottom: rem(15px);
 }
 
-.team-accordeon__item--active {
+.team-accordeon__item.active {
 
   .team-accordeon__content {
     margin-top: rem(20px);

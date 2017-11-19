@@ -15,7 +15,6 @@
   }
 }
 
-
 .menu-acco {
   display: flex;
   position: absolute;
@@ -28,15 +27,16 @@
   height: 100%;
   display: flex;
   position: relative;
+  background-size: cover;
+  background-position: 85%;
+  background-repeat: no-repeat;
 }
 
 .menu-acco__link {
   width: rem(80px);
   height: 100%;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
   text-decoration: none;
+  background-color: rgba($dark, .6);
 }
 
 .menu-acco__title {
@@ -60,7 +60,7 @@
   line-height: rem(24px);
 }
 
-.menu-acco__item--active {
+.menu-acco__item.active {
   .menu-acco__desc {
     width: rem(540px);
     padding: rem(60px) rem(35px);
