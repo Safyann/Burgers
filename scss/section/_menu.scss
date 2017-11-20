@@ -52,8 +52,6 @@
 }
 
 .menu-acco__desc {
-  width: 0;
-  overflow: hidden;
   transition: .7s;
   background-color: $dark;
   opacity: 0.93;
@@ -61,7 +59,10 @@
 }
 
 .menu-acco__item.active {
-  .menu-acco__desc {
+  .menu-acco__title {
+    color: $yellow;
+  }
+  .menu-acco__text {
     width: rem(540px);
     padding: rem(60px) rem(35px);
     @include tablets {
@@ -71,6 +72,8 @@
 }
 
 .menu-acco__text {
+  width: 0;
+  overflow: hidden;
   color: #fff;
   font-size: rem(14px);
   font-weight: 300;

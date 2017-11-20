@@ -71,7 +71,7 @@ ul {
   overflow: hidden; }
 
 .maincontent {
-  height: 100%;
+  height: 100vh;
   min-height: 40.625rem; }
 
 .container {
@@ -99,9 +99,8 @@ ul {
   position: relative; }
 
 .section {
-  height: 100vh;
+  height: 100vh !important;
   background-color: rgba(0, 0, 0, 0.31);
-  min-height: 40.625rem;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -620,13 +619,13 @@ ul {
   height: 0.9375rem;
   fill: #fff;
   z-index: 2; }
-  .burger-slider__btn_prew {
+  .burger-slider__btn_prev {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     left: -5%; }
     @media screen and (max-width: 768px) {
-      .burger-slider__btn_prew {
+      .burger-slider__btn_prev {
         left: -1%; } }
   .burger-slider__btn_next {
     -webkit-transform: rotate(-90deg);
@@ -921,9 +920,6 @@ ul {
   display: flex;
   height: 0;
   overflow: hidden;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
   margin-bottom: 1.25rem;
   padding-left: 1.25rem; }
   @media screen and (max-width: 768px) {
@@ -994,16 +990,18 @@ ul {
   margin-bottom: 0.9375rem; }
 
 .team-accordeon__item.active .team-accordeon__content {
-  margin-top: 1.25rem; }
+  margin-top: 1.25rem;
+  height: auto; }
 
 .team-accordeon__item.active .team-accordeon__name {
   color: #f9b43b; }
   .team-accordeon__item.active .team-accordeon__name::before {
-    border-top: transparent;
-    border-bottom: 0.625rem solid #f9b43b;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    -webkit-transform: rotate(-180deg) translateY(75%);
+    -ms-transform: rotate(-180deg) translateY(75%);
+    transform: rotate(-180deg) translateY(75%); }
 
 .menu {
   background-image: url(../img/bg/menu_bg.jpg);
@@ -1060,8 +1058,6 @@ ul {
   transform: translateY(-50%) translateX(-35%) rotate(-90deg); }
 
 .menu-acco__desc {
-  width: 0;
-  overflow: hidden;
   -webkit-transition: .7s;
   -o-transition: .7s;
   transition: .7s;
@@ -1069,14 +1065,19 @@ ul {
   opacity: 0.93;
   line-height: 1.5rem; }
 
-.menu-acco__item.active .menu-acco__desc {
+.menu-acco__item.active .menu-acco__title {
+  color: #f9b43b; }
+
+.menu-acco__item.active .menu-acco__text {
   width: 33.75rem;
   padding: 3.75rem 2.1875rem; }
   @media screen and (max-width: 768px) {
-    .menu-acco__item.active .menu-acco__desc {
+    .menu-acco__item.active .menu-acco__text {
       width: 100%; } }
 
 .menu-acco__text {
+  width: 0;
+  overflow: hidden;
   color: #fff;
   font-size: 0.875rem;
   font-weight: 300; }

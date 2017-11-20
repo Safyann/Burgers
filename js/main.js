@@ -57,80 +57,46 @@ $(document).ready(() => {
 
 		$(".burgers-slider").trigger('next.owl.carousel')
 	})
-	$(".burger-slider__btn_prew").on("click", e => {
+	$(".burger-slider__btn_prev").on("click", e => {
 		e.preventDefault()
 
-		$(".burgers-slider").trigger('prew.owl.carousel')
+		$(".burgers-slider").trigger('prev.owl.carousel')
 	})
 });
 
 $(function () {
-  $('.team-accordeon__item').on('click', e => {
+  $('.team-accordeon__name').on('click', e => {
     e.preventDefault()
 
-    const $this = $(e.currentTarget);
-    const container = $this.closest('.team-accordeon');
-    const item = $this.closest('.team-accordeon__item');
-    const items = $('.team-accordeon__item', container);
-    const content = $('.team-accordeon__content', item);
-    const otherContent = $('.team-accordeon__content', container);
-    const textBlock = $('.team-accordeon__text', item);
-    const reqHeight = textBlock.outerHeight();
+		var $this = $(e.currentTarget),
+				list = $this.closest('.team-accordeon'),
+				item = $this.closest('.team-accordeon__item'),
+				items = $('.team-accordeon__item', list);
 
-    if (!item.hasClass('active')) {
+		if (!item.hasClass('active')) {
       items.removeClass('active')
       item.addClass('active')
-
-      otherContent.css({
-        'height': 0
-      })
-
-      content.css({
-        'height': reqHeight
-      })
-
     } else {
-
-      item.removeClass('active');
-      content.css({
-        'height' : 0
-      })
+      item.removeClass('active')
     }
 
   })
 })
 
 $(function () {
-  $('.menu-acco__item').on('click', e => {
+	$('.menu-acco__link').on('click', e => {
     e.preventDefault()
 
-    const $this = $(e.currentTarget);
-    const container = $this.closest('.menu-acco');
-    const item = $this.closest('.menu-acco__item');
-    const items = $('.menu-acco__item', container);
-    const content = $('.menu-acco__desc', item);
-    const otherContent = $('.menu-acco__desc', container);
-    const textBlock = $('.menu-acco__text', item);
-    const reqWidth = textBlock.outerWidth();
+		var $this = $(e.currentTarget),
+				list = $this.closest('.menu-acco'),
+				item = $this.closest('.menu-acco__item'),
+				items = $('.menu-acco__item', list);
 
-    if (!item.hasClass('active')) {
+		if (!item.hasClass('active')) {
       items.removeClass('active')
       item.addClass('active')
-
-      otherContent.css({
-        'width': 0
-      })
-
-      content.css({
-        'width': reqWidth
-      })
-
     } else {
-
-      item.removeClass('active');
-      content.css({
-        'width' : 0
-      })
+      item.removeClass('active')
     }
 
   })
