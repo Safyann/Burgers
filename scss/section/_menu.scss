@@ -10,8 +10,10 @@
 .menu__title {
   color: #fff;
   padding: rem(110px) rem(95px);
+  @include tablets {
+    padding: rem(60px) rem(20px);
+  }
 }
-
 
 .menu-acco {
   display: flex;
@@ -25,15 +27,16 @@
   height: 100%;
   display: flex;
   position: relative;
+  background-size: cover;
+  background-position: 85%;
+  background-repeat: no-repeat;
 }
 
 .menu-acco__link {
   width: rem(80px);
   height: 100%;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
   text-decoration: none;
+  background-color: rgba($dark, .6);
 }
 
 .menu-acco__title {
@@ -49,15 +52,17 @@
 }
 
 .menu-acco__desc {
-  width: 0;
-  overflow: hidden;
+  transition: .7s;
   background-color: $dark;
   opacity: 0.93;
   line-height: rem(24px);
 }
 
-.menu-acco__item--active {
-  .menu-acco__desc {
+.menu-acco__item.active {
+  .menu-acco__title {
+    color: $yellow;
+  }
+  .menu-acco__text {
     width: rem(540px);
     padding: rem(60px) rem(35px);
     @include tablets {
@@ -67,6 +72,8 @@
 }
 
 .menu-acco__text {
+  width: 0;
+  overflow: hidden;
   color: #fff;
   font-size: rem(14px);
   font-weight: 300;

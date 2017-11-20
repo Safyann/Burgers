@@ -91,19 +91,17 @@
   margin-bottom: rem(15px);
 }
 
-.team-accordeon__item--active {
-
+.team-accordeon__item.active {
   .team-accordeon__content {
-    height: auto;
     margin-top: rem(20px);
+    height: auto;
   }
 
   .team-accordeon__name {
     color: $yellow;
     &::before {
-      border-top: transparent;
-      border-bottom: rem(10px) solid $yellow;
-      transform: translateY(-50%)
+      transition: .5s;
+      transform: rotate(-180deg) translateY(75%);
     }
   }
 }
