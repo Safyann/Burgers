@@ -4,13 +4,14 @@
 Наставик: Азаркин Николай
 
  Сделано на курсах loftschool.ru
+ 
+ Сайт: <https://safyann.github.io/Burgers/>
 
 ### Технологии
 
 Технологии которые использовались в Mr. Burger :
 
-* [Gulp] - the streaming build system
-* [jQuery] - duh
-
-И конечно Mr. Burger это open source с [public repository][dill]
- на GitHub.
+* [Gulp]
+* [jQuery]
+* [SASS]
+* [AJAX]
