@@ -28,19 +28,19 @@
               <nav class="nav">
                 <ul class="nav-list">
                   <li class="nav__item">
-                    <a href="#1" class="nav__link" data-scroll-to="1">О нас</a>
+                    <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#2" class="nav__link" data-scroll-to="2">Бургеры</a>
+                    <a href="#" class="nav__link" data-scroll-to="2">Бургеры</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#3" class="nav__link" data-scroll-to="3">Команда</a>
+                    <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#4" class="nav__link" data-scroll-to="4">Меню</a>
+                    <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#5" class="nav__link" data-scroll-to="5">Отзывы</a>
+                    <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
                   </li>
                   <li class="nav__item">
                     <a href="#" class="nav__link" data-scroll-to="7">Контакты</a>
@@ -49,7 +49,7 @@
               </nav>
             </div>
             <div class="header__links">
-              <a class="order" href="#6" data-scroll-to="6">Заказать</a>
+              <a class="order" href="#" data-scroll-to="6">Заказать</a>
               <a class="hamburger-menu-link" href="#">
                 <div class="hamburger-menu-link__line"></div>
                 <div class="hamburger-menu-link__line"></div>
@@ -68,7 +68,7 @@
             </div>
           </div>
 
-          <a href="#1" class="scroll" data-scroll-to="1">
+          <a href="#" class="scroll" data-scroll-to="1">
             <svg class="scroll__img">
               <use xlink:href="img/icons/sprite.svg#arrow-scroll"></use>
             </svg>
@@ -850,7 +850,7 @@
       <section class="section form">
         <div class="container form_container">
           <h2 class="section__title">Закажите доставку</h2>
-          <form class="form__order">
+          <form class="form__order" id="form-order" action="mail.php" method="post">
             <div class="form__col">
               <div class="form__row">
                 <div class="form__block">
@@ -896,25 +896,25 @@
               </div>
               <div class="form__row">
                 <label class="form__label form__label-radio">
-                  <input type="radio" name="payment" value="delivery" class="form__radio">
+                  <input type="radio" name="payment" value="Потребуется сдача" class="form__radio">
                   <span class="form__radio-fake"></span>
-                  <span class="form__label">Потребуется здача </span>
+                  <span class="form__label">Потребуется сдача </span>
                 </label>
                 <label class="form__label form__label-radio">
-                  <input type="radio" name="payment" value="paymentbycard" class="form__radio">
+                  <input type="radio" name="payment" value="Картой" class="form__radio">
                   <span class="form__radio-fake"></span>
                   <span class="form__label">Оплата по карте</span>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__label form__label-chekbox">
-                  <input type="checkbox" class="form__radio">
+                  <input type="checkbox" class="form__radio" name="distrab" value="NO">
                   <span class="form__radio-fake"></span>
                   <span class="form__label">Не перезванивать</span>
                 </label>
               </div>
               <div class="form__row">
-                <button type="submit" name="button" class="order">Заказать</button>
+                <button type="submit" class="order">Заказать</button>
                 <input type="reset" class="form__clear" value="Очистить">
               </div>
             </div>
@@ -962,11 +962,19 @@
         забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
       </div>
     </div>
+    <div class="status popup" id="done">
+      <div class="status__msg">Сообщение отправлено</div>
+      <a href="#" class="status__close order">Закрыть</a>
+    </div>
+    <div class="status popup" id="fail">
+      <div class="status__msg fail__msg">Произошла ошибка</div>
+      <a href="#" class="status__close order">Закрыть</a>
+    </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.onepage-scroll.js"></script>
+  <script src="js/jquery.onepage-scroll.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
 </body>
